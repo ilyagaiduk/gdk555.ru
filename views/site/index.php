@@ -11,11 +11,6 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Используйте API ля управления участниками мероприятия.</p>
 
-        <?php
-        foreach($tableUsers as $key) {
-            echo $key['members.fullname']."<br>";
-        }
-        ?>
     </div>
 
 

@@ -137,9 +137,6 @@ class SiteController extends Controller
         $token = preg_replace('/[^\p{L}0-9-\s ]/iu','', Yii::$app->request->get('token'));
         $id = preg_replace('/[^\p{L}0-9-\s ]/iu','', Yii::$app->request->get('id'));
         $email = filter_var(Yii::$app->request->get('email'), FILTER_VALIDATE_EMAIL);
-        if(!$email){
-            return "Email не прошел валидацию";
-        }
         $newObj = new Api();
         $modelApi = $newObj->getApi($event, $name, $email, $operation, $id, $token);
         return $modelApi;
